@@ -7,7 +7,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "src/test/java/dsalgocucumber/Feature/Queue.feature"  // features ka full path starting from src directory
+		features = "src/test/java/dsalgocucumber/Feature/DSalgo_girija.feature"  // features ka full path starting from src directory
 		,glue={"dsalgocucumber.stepDefinition"},
 		dryRun=false,
 		plugin = {"pretty","html:test-output.html"}
