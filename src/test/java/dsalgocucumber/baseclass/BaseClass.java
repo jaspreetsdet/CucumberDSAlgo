@@ -33,12 +33,9 @@ public class BaseClass {
 		edriver = DriverManager.getDriver();
 	}
 	
-	public void setup() {
-	// Do something before each scenario
-		
+	public BaseClass() {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
-		driver.get("https://dsportalapp.herokuapp.com/home");
 		driver.manage().window().maximize();
 	}
 

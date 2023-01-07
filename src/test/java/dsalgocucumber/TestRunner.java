@@ -7,12 +7,13 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "src/test/java/dsalgocucumber/Feature/Stack.feature"  
+		features = "src/test/java/dsalgocucumber/Feature/Queue.feature" 
 		,glue={"dsalgocucumber.stepDefinition"},
-		dryRun=true,
+		dryRun=false,
 		plugin = {"pretty","html:test-output.html"}
 		
 		)
+
 
 public class TestRunner {
 
