@@ -7,14 +7,12 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "src/test/java/dsalgocucumber/Feature/DSalgo_girija.feature"  // features ka full path starting from src directory
+		features = "src/test/java/dsalgocucumber/Feature/Stack.feature"  
 		,glue={"dsalgocucumber.stepDefinition"},
-		dryRun=false,
+		dryRun=true,
 		plugin = {"pretty","html:test-output.html"}
 		
 		)
-
-// yehi pattern hai remember it
 
 public class TestRunner {
 
@@ -22,4 +20,3 @@ public class TestRunner {
 }
 
 
-//for report right click on test output and open wid webbrowser

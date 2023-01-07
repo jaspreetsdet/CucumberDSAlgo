@@ -14,19 +14,19 @@ public class DsAlgosteps extends BaseClass{
 	    edriver .get(url);
 	    edriver.manage().window().maximize();
 	}
-
-	@When("The user should land in DS Algo portal page")
-	public void the_user_should_land_in_ds_algo_portal_page() {
-	   	  
-	   System.out.println("I am in home page");
-	
-		}
-
-	@When("The user clicks the {string} button")
-	public void the_user_clicks_the_button(String string) {
-	   da.getStarted();
-	}
-
+//
+//	@When("The user should land in DS Algo portal page")
+//	public void the_user_should_land_in_ds_algo_portal_page() {
+//	   	  
+//	   System.out.println("I am in home page");
+//	
+//		}
+//
+//	@When("The user clicks the {string} button")
+//	public void the_user_clicks_the_button(String string) {
+//	   da.getStarted();
+//	}
+//
 	@Then("The user should be in homepage")
 	public void the_user_should_be_redirected_to_homepage() {
 		 String actualTitle = edriver.getTitle();
@@ -37,22 +37,22 @@ public class DsAlgosteps extends BaseClass{
 	    else
 	    	System.out.println("Title did not match");
 	}
-	
+//	
 	@Then("The user should see {int} panels with different data structures")
 	public void the_user_should_see_panels_with_different_data_structures(Integer int1) {
 	    da.dataPanels();
 	}
-
+//
 	@When("The user clicks {string} drop down")
 	public void the_user_clicks_drop_down(String string) {
 	    da.dropDown();
 	}
-
+//
 	@Then("The user should see {int} different data structure entries in that dropdown")
 	public void the_user_should_see_different_data_structure_entries_in_that_dropdown(Integer int1) {
 	    da.ddSize();
 	}
-
+//
 	@When("The user clicks any of the {string} buttons below the data structures")
 	public void the_user_clicks_any_of_the_buttons_below_the_data_structures(String string) {
 	    da.dataStruc();
