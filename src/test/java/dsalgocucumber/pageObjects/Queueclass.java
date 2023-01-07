@@ -19,7 +19,6 @@ public class Queueclass {
 	WebElement queueinpython;
 
 	public void clickQueueinPython() {
-
 		queueinpython.click();
 
 	}

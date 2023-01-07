@@ -13,17 +13,17 @@ public class CommonUtilities {
 	
 //	static WebDriver driver;
 
-	public static  WebDriver setup() {
+//	public static  WebDriver setup() {
+//
+//		WebDriverManager.chromedriver().setup();
+//      WebDriver   driver=new ChromeDriver();
+//        driver.get("https://dsportalapp.herokuapp.com/home");
+//		driver.manage().window().maximize();
+//		return driver;
+//
+//	}
 
-		WebDriverManager.chromedriver().setup();
-      WebDriver   driver=new ChromeDriver();
-        driver.get("https://dsportalapp.herokuapp.com/home");
-		driver.manage().window().maximize();
-		return driver;
-
-	}
-
-	public void signIn(WebDriver driver) {
+	public static void signIn(WebDriver driver) {
 
 		HomePage hp = new HomePage(driver); 
 		hp.clicregister();

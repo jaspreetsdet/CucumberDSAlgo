@@ -1,8 +1,6 @@
 package dsalgocucumber.stepDefinition;
 
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
@@ -18,22 +16,17 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Queuesteps extends BaseClass  {
+public class Queuesteps extends BaseClass{
 
-	WebDriver driver;
-
+//	WebDriver driver;
 
 	@Given("The user is in the Queue page after logged in")
-	public void the_user_is_in_the_queue_page_after_logged_in() {
+	public void the_user_is_in_the_queue_page_after_logged_in() throws InterruptedException {
 
-//		log = LogManager.getLogger("baseclass");
-
-		driver = CommonUtilities.setup();
-		CommonUtilities cu = new CommonUtilities();
-		cu.signIn(driver);
+		driver.get("https://dsportalapp.herokuapp.com/home");
+		CommonUtilities.signIn(driver);
 		System.out.println("LOGGING SYSOUT");
-		log.debug("logging");
-		log.info("logging info");
+		
 
 	}
 
@@ -55,9 +48,10 @@ public class Queuesteps extends BaseClass  {
 	@Given("The user is in the Implementation of Queue in Pythonpage after logged in")
 	public void the_user_is_in_the_implementation_of_queue_in_pythonpage_after_logged_in() {
 
-		driver = CommonUtilities.setup();
-		CommonUtilities cu = new CommonUtilities();
-		cu.signIn(driver);
+//		driver = CommonUtilities.setup();
+//		CommonUtilities cu = new CommonUtilities();
+		driver.get("https://dsportalapp.herokuapp.com/home");
+		CommonUtilities.signIn(driver);
 
 		Queueclass q = new Queueclass(driver);
 		q.clickQueueinPython();
@@ -126,9 +120,10 @@ public class Queuesteps extends BaseClass  {
 	public void the_user_is_in_the_implementation_using_collections_deque_page_after_logged_in()
 			throws InterruptedException {
 
-		driver = CommonUtilities.setup();
-		CommonUtilities cu = new CommonUtilities();
-		cu.signIn(driver);
+//		driver = CommonUtilities.setup();
+//		CommonUtilities cu = new CommonUtilities();
+		driver.get("https://dsportalapp.herokuapp.com/home");
+		CommonUtilities.signIn(driver);
 
 		Queueclass q = new Queueclass(driver);
 		q.clickimplementationcollections();
@@ -141,9 +136,10 @@ public class Queuesteps extends BaseClass  {
 	@Given("The user is in the Implementation using Array page after logged in")
 	public void the_user_is_in_the_implementation_using_array_page_after_logged_in() throws InterruptedException {
 
-		driver = CommonUtilities.setup();
-		CommonUtilities cu = new CommonUtilities();
-		cu.signIn(driver);
+//		driver = CommonUtilities.setup();
+//		CommonUtilities cu = new CommonUtilities();
+		driver.get("https://dsportalapp.herokuapp.com/home");
+		CommonUtilities.signIn(driver);
 
 		Queueclass q = new Queueclass(driver);
 		q.clickImplementationofarraypage();
@@ -153,9 +149,10 @@ public class Queuesteps extends BaseClass  {
 	@Given("The user is in the Queue Operations page after logged in")
 	public void the_user_is_in_the_queue_operations_page_after_logged_in() {
 
-		driver = CommonUtilities.setup();
-		CommonUtilities cu = new CommonUtilities();
-		cu.signIn(driver);
+//		driver = CommonUtilities.setup();
+//		CommonUtilities cu = new CommonUtilities();
+		driver.get("https://dsportalapp.herokuapp.com/home");
+		CommonUtilities.signIn(driver);
 
 		Queueclass q = new Queueclass(driver);
 		q.clickQueueoperations();
