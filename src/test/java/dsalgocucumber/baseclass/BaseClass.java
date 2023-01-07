@@ -1,5 +1,6 @@
 package dsalgocucumber.baseclass;
 
+import org.apache.logging.log4j.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -27,12 +28,14 @@ public class BaseClass {
 	public static USignOutPage signout;
 	public static Graph graph;
 	public static LinkedListPage LL;
+	public static Logger log;
 	static {
 		edriver = DriverManager.getDriver();
 	}
 	
 	public void setup() {
 	// Do something before each scenario
+		
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.get("https://dsportalapp.herokuapp.com/home");

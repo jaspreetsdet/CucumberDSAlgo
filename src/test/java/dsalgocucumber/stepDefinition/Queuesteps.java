@@ -1,7 +1,12 @@
 package dsalgocucumber.stepDefinition;
 
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
+
+import dsalgocucumber.baseclass.BaseClass;
 import dsalgocucumber.pageObjects.Implementationofarraypage;
 import dsalgocucumber.pageObjects.Implementationusingcollections_dqueue;
 import dsalgocucumber.pageObjects.Queueclass;
@@ -13,7 +18,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Queuesteps {
+public class Queuesteps extends BaseClass  {
 
 	WebDriver driver;
 
@@ -21,9 +26,14 @@ public class Queuesteps {
 	@Given("The user is in the Queue page after logged in")
 	public void the_user_is_in_the_queue_page_after_logged_in() {
 
+//		log = LogManager.getLogger("baseclass");
+
 		driver = CommonUtilities.setup();
 		CommonUtilities cu = new CommonUtilities();
 		cu.signIn(driver);
+		System.out.println("LOGGING SYSOUT");
+		log.debug("logging");
+		log.info("logging info");
 
 	}
 

@@ -2,6 +2,7 @@ package dsalgocucumber.utilities;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import dsalgocucumber.pageObjects.HomePage;
 import dsalgocucumber.pageObjects.RegisterPage;
@@ -15,8 +16,8 @@ public class CommonUtilities {
 	public static  WebDriver setup() {
 
 		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
-		driver.get("https://dsportalapp.herokuapp.com/home");
+      WebDriver   driver=new ChromeDriver();
+        driver.get("https://dsportalapp.herokuapp.com/home");
 		driver.manage().window().maximize();
 		return driver;
 
@@ -24,7 +25,7 @@ public class CommonUtilities {
 
 	public void signIn(WebDriver driver) {
 
-		HomePage hp = new HomePage(driver);
+		HomePage hp = new HomePage(driver); 
 		hp.clicregister();
 		RegisterPage rp = new RegisterPage(driver);
 		rp.enterusername("MyUserName2");
